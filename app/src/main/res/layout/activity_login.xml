@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>                                                                                                                                                                                                                                                                                                                                                                                                                                                     <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -108,14 +108,14 @@
 
     </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:text="Login"
-            android:layout_width="match_parent"
-            android:textColor="@color/white"
-            android:background="@drawable/circular_button"
-            android:layout_height="45dp">
+    <androidx.appcompat.widget.AppCompatButton
+        android:text="Login"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:background="@drawable/circular_button"
+        android:layout_height="45dp">
 
-        </androidx.appcompat.widget.AppCompatButton>
+    </androidx.appcompat.widget.AppCompatButton>
 
 
     <LinearLayout
@@ -145,5 +145,6 @@
             />
 
     </LinearLayout>
+
 
 </LinearLayout>
