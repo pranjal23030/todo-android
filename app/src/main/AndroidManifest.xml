@@ -12,7 +12,7 @@
         android:theme="@style/Theme.NamiMiniProject"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:theme="@style/AppTheme.FullScreen"
             android:exported="true">
             <intent-filter>
@@ -21,10 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme.FullScreen">
         </activity>
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
+
+        <activity
+            android:name=".activity.TodoActivity"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
+
     </application>
 
 </manifest>
