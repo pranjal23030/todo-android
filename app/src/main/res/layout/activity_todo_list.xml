@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_border"
+        android:padding="@dimen/margin_small"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Task Title"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/text_hint_color"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/yellow_border"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="16sp"
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:paddingHorizontal="8dp"
+                android:hint="Completed" />
+
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Task Description goes here..."
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/text_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:drawableStart="@drawable/calendar_icon"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Due: Dec 25,2024"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:drawableEnd="@drawable/edit_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
