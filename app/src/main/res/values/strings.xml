@@ -3,4 +3,6 @@
 
     <!--SplashActivity-->
     <string name="splash_slogan">Easily organize your tasks and get more done \n every day</string>
+    <string name="join_us">Join Us!</string>
+    <string name="task_description">Task Description goes here...</string>
 </resources>
