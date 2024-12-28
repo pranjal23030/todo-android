@@ -1,4 +1,4 @@
-package com.example.namiminiproject;
+package com.example.namiminiproject.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -18,6 +18,12 @@ public class User {
 
     @ColumnInfo(name = "password")
     private String password;
+
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 
     public int getId() {
         return id;
