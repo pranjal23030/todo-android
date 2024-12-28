@@ -33,7 +33,7 @@
         </activity>
 
         <activity
-            android:name=".activity.TodoActivity"
+            android:name=".activity.TodoListItemActivity"
             android:theme="@style/AppTheme.FullScreen">
         </activity>
 
