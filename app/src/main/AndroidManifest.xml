@@ -37,6 +37,16 @@
             android:theme="@style/AppTheme.FullScreen">
         </activity>
 
+        <activity
+            android:name=".activity.HomeActivity"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
+
+        <activity
+            android:name=".activity.CreateTaskActivity"
+            android:theme="@style/AppTheme.FullScreen">
+        </activity>
+
     </application>
 
 </manifest>
