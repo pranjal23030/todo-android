@@ -49,7 +49,7 @@
         android:textSize="@dimen/text_xlarge"
         />
 
-    <EditText
+    <ImageView
         android:id="@+id/et_create_task_description"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -60,10 +60,18 @@
         android:textColorHint="@color/text_hint_color"
         />
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_gravity="center"
         android:padding="12dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="20dp"
         android:textAllCaps="false"
         android:id="@+id/create_task_button"
         android:text="Create Task"
@@ -75,7 +83,6 @@
         android:textColor="@color/white"
         android:background="@drawable/circular_button"
         android:layout_height="50dp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
 </LinearLayout>
