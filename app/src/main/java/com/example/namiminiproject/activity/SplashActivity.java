@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(() ->{
             System.out.println(isUserLoggedIn);
             if (isUserLoggedIn == true) {
-                Intent intent = new Intent(SplashActivity.this, TodoListItemActivity.class);
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             } else {
