@@ -1,4 +1,4 @@
-package com.example.namiminiproject;
+package com.example.namiminiproject.database;
 
 import android.content.Context;
 
@@ -11,8 +11,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.namiminiproject.database.dao.TaskDao;
 import com.example.namiminiproject.database.dao.UserDao;
-import com.example.namiminiproject.entities.Task;
-import com.example.namiminiproject.entities.User;
+import com.example.namiminiproject.database.entities.Task;
+import com.example.namiminiproject.database.entities.User;
 
 @Database(entities = {User.class, Task.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
