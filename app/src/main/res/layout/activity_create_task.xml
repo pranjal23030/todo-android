@@ -35,7 +35,7 @@
         >
 
             <TextView
-                android:id="@+id/et_create_task_date"
+                android:id="@+id/tv_create_task_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -45,37 +45,41 @@
                 android:textSize="@dimen/text_medium"
                 />
 
-            <EditText
-                android:layout_below="@+id/et_create_task_date"
+            <TextView
+                android:id="@+id/tv_task_select_date"
+                android:layout_below="@+id/tv_create_task_date"
                 android:layout_width="170dp"
                 android:drawableStart="@drawable/calendar_icon"
+                android:gravity="center"
                 android:layout_height="45dp"
                 android:layout_weight="1"
                 android:background="@drawable/white_border"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="@dimen/text_medium"
                 android:paddingHorizontal="@dimen/margin_small"
-                android:drawablePadding="4dp"
+                android:drawablePadding="-20dp"
                 android:textColorHint="@color/text_hint_color"
                 android:hint="Select Date" />
             />
 
         <TextView
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:id="@+id/et_create_task_time"
+            android:id="@+id/tv_create_task_time"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="0dp"
             android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
             android:text="Time"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_medium"
-            />
+            android:textSize="@dimen/text_medium" />
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_task_select_time"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/et_create_task_time"
+            android:gravity="center"
+            android:layout_below="@+id/tv_create_task_time"
             android:layout_width="170dp"
             android:drawableStart="@drawable/time_icon"
             android:layout_height="45dp"
@@ -84,7 +88,7 @@
             android:fontFamily="@font/poppins_light"
             android:textSize="@dimen/text_medium"
             android:paddingHorizontal="@dimen/margin_small"
-            android:drawablePadding="4dp"
+            android:drawablePadding="-20dp"
             android:textColorHint="@color/text_hint_color"
             android:hint="Select Time" />
         />
@@ -187,7 +191,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="110dp"
-        android:id="@+id/create_task_button"
+        android:id="@+id/create_task_form_button"
         android:text="Create Task"
         android:layout_width="match_parent"
         android:textColor="@color/white"
