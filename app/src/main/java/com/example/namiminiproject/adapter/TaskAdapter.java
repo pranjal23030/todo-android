@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.namiminiproject.R;
-import com.example.namiminiproject.entities.Task;
+import com.example.namiminiproject.database.entities.Task;
 
 import java.util.ArrayList;
 
@@ -39,7 +39,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
         Task task = taskArrayList.get(position);
         holder.tvTaskTitle.setText(task.getTitle());
         holder.tvTaskDescription.setText(task.getDescription());
+        holder.tvTaskStatus.setText(task.getStatus());
         holder.tvTaskDueDate.setText(task.getDueDate());
+        holder.tvTaskDueTime.setText(task.getDueTime());
     }
 
     @Override
@@ -49,7 +51,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         // Working on findViewById
-        TextView tvTaskTitle, tvTaskDescription, tvTaskDueDate;
+        TextView tvTaskTitle, tvTaskDescription, tvTaskStatus, tvTaskDueDate, tvTaskDueTime;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,7 +63,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
         void initView() {
             tvTaskTitle = itemView.findViewById(R.id.tv_task_title);
             tvTaskDescription = itemView.findViewById(R.id.tv_task_description);
-            tvTaskDueDate = itemView.findViewById(R.id.delete_button);
+            tvTaskStatus = itemView.findViewById(R.id.tv_task_status);
+            tvTaskDueTime = itemView.findViewById(R.id.tv_task_due_time);
+            tvTaskDueDate = itemView.findViewById(R.id.tv_task_due_date);
         }
     }
 }
