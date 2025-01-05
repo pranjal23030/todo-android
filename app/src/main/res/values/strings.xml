@@ -1,21 +1,89 @@
 <resources>
     <string name="app_name">NamiMiniProject</string>
 
-    <!--SplashActivity-->
+    <!--Splash Activity-->
     <string name="splash_slogan">Easily organize your tasks and get more done \n every day</string>
 
+
+    <!--SettingActivity-->
+    <string name="settings">Settings</string>
+    <string name="select_language">Select language</string>
+    <string name="english_language">English</string>
+    <string name="nepali_language">Nepali</string>
+    <string name="select_theme">Theme</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+    <string name="logout">Logout</string>
+
+
+    <!--RegisterActivity-->
     <string name="join_us">Join Us!</string>
+    <string name="name">Name:</string>
+    <string name="enter_name">Enter your full name</string>
+    <string name="email">Email:</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="confirm_password">Confirm password:</string>
+    <string name="enter_confirm_password">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="login_check">Already have an account?</string>
+    <string name="sign_in">Sign In</string>
 
-    <string name="task_description">Task Description goes here...</string>
 
+    <!--Login and Register Activity-->
+    <string name="password">Password:</string>
+    <string name="enter_password">Enter password</string>
+
+
+    <!--LoginActivity-->
+    <string name="login_text">Login</string>
+    <string name="login_username">Username</string>
+    <string name="enter_username">Enter user name</string>
+    <string name="login_password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="register_check">Do not have an account?</string>
+    <string name="sign_up">Sign Up</string>
+
+
+    <!--HomeActivity-->
+    <string name="todo_title">To-Do List</string>
+    <string name="static_text">Hello, Pranjal</string>
+    <string name="static_task_no">10</string>
+    <string name="total_task">Total Task</string>
+
+
+    <!--Home Activity and CreateTaskActivity-->
+    <string name="create_task">Create Task</string>
+
+
+    <!--CreateTaskActivity-->
+    <string name="task_title">Task Title</string>
+    <string name="enter_title">Enter title</string>
+    <string name="task_date">Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="task_time">Time</string>
+    <string name="select_time">Select Time</string>
+
+    <string name="task_priority">Priority</string>
     <string-array name="priority_spinner">
         <item>Low</item>
         <item>Medium</item>
         <item>High</item>
     </string-array>
 
+    <string name="task_status">Status</string>
     <string-array name="status_spinner">
         <item>Pending</item>
         <item>Completed</item>
     </string-array>
+
+    <string name="form_task_description">Description</string>
+    <string name="enter_description">Enter Description</string>
+
+    <!--TodoListItemActivity-->
+    <string name="task_description">Task Description goes here...</string>
+    <string name="static_due_date">Due: Dec 25, 2025</string>
+    <string name="static_due_time">17:15</string>
+    <string name="list_task_status">Completed</string>
+
 </resources>

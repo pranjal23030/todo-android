@@ -29,4 +29,7 @@
 
     <color name="primaryColorDark">#3471AC</color>
     <color name="primaryColor">#59AAFA</color>
+
+    <color name="brighter_light_blue">#D0F0FF</color> <!-- Even Brighter Light Blue -->
+
 </resources>
