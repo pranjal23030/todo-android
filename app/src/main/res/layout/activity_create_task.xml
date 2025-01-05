@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Task Title"
+        android:text="@string/task_title"
         android:textColor="@color/black"
         android:textSize="@dimen/text_medium"
         >
@@ -26,7 +26,7 @@
         android:textSize="@dimen/text_medium"
         android:paddingHorizontal="@dimen/margin_small"
         android:textColorHint="@color/text_hint_color"
-        android:hint="Enter title" />
+        android:hint="@string/enter_title" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="Date"
+                android:text="@string/task_date"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_medium"
                 />
@@ -59,7 +59,7 @@
                 android:paddingHorizontal="@dimen/margin_small"
                 android:drawablePadding="-20dp"
                 android:textColorHint="@color/text_hint_color"
-                android:hint="Select Date" />
+                android:hint="@string/select_date" />
             />
 
         <TextView
@@ -71,7 +71,7 @@
             android:layout_marginRight="0dp"
             android:fontFamily="@font/poppins_semi_bold"
             android:gravity="center"
-            android:text="Time"
+            android:text="@string/task_time"
             android:textColor="@color/black"
             android:textSize="@dimen/text_medium" />
 
@@ -90,7 +90,7 @@
             android:paddingHorizontal="@dimen/margin_small"
             android:drawablePadding="-20dp"
             android:textColorHint="@color/text_hint_color"
-            android:hint="Select Time" />
+            android:hint="@string/select_time" />
         />
 
     </RelativeLayout>
@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Priority"
+        android:text="@string/task_priority"
         android:textColor="@color/black"
         android:textSize="@dimen/text_medium"
         >
@@ -136,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Status"
+        android:text="@string/task_status"
         android:textColor="@color/black"
         android:textSize="@dimen/text_medium"
         >
@@ -172,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins_semi_bold"
-        android:text="Description"
+        android:text="@string/form_task_description"
         android:textColor="@color/black"
         android:textSize="@dimen/text_medium"
         >
@@ -187,12 +187,12 @@
         android:textSize="@dimen/text_medium"
         android:paddingHorizontal="@dimen/margin_small"
         android:textColorHint="@color/text_hint_color"
-        android:hint="Enter description" />
+        android:hint="@string/enter_description" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="110dp"
         android:id="@+id/create_task_form_button"
-        android:text="Create Task"
+        android:text="@string/create_task"
         android:layout_width="match_parent"
         android:textColor="@color/white"
         android:background="@drawable/circular_button"
