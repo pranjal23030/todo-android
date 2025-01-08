@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    >
+
+    <TextView
+        android:id="@+id/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/back_arrow_icon"
+        android:drawablePadding="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_xlarge"
+        android:layout_marginBottom="@dimen/margin_large"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/select_language"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            />
+
+        <RadioGroup
+            android:id="@+id/language_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_button_english"
+                android:text="@string/english_language"
+                android:textSize="@dimen/margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/margin_medium"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_button_nepali"
+                android:text="@string/nepali_language"
+                android:textSize="@dimen/margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_large"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/select_theme"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            />
+
+        <RadioGroup
+            android:id="@+id/theme_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_button_light"
+                android:text="@string/light_theme"
+                android:textSize="@dimen/margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/margin_medium"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_button_dark"
+                android:text="@string/dark_theme"
+                android:textSize="@dimen/margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_large"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/logout"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="@dimen/margin_small"
+            android:id="@+id/logout_button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/logout"
+            android:textSize="@dimen/margin_medium"
+            android:layout_gravity="center"
+            android:layout_width="350dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/circular_button"
+            android:layout_height="45dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:textStyle="bold"
+            >
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+    
+
+</LinearLayout>

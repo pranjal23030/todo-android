@@ -118,16 +118,16 @@
             android:background="@drawable/white_border"
             android:entries="@array/priority_spinner"
             android:fontFamily="@font/poppins_light"
-            android:paddingHorizontal="8dp"
+            android:paddingHorizontal="@dimen/margin_small"
             android:textColorHint="@color/text_hint_color"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_medium" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/margin_small"
             android:src="@drawable/dropdown_arrow" />
     </RelativeLayout>
 
@@ -154,16 +154,16 @@
             android:background="@drawable/white_border"
             android:entries="@array/status_spinner"
             android:fontFamily="@font/poppins_light"
-            android:paddingHorizontal="8dp"
+            android:paddingHorizontal="@dimen/margin_small"
             android:textColorHint="@color/text_hint_color"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_medium" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/margin_small"
             android:src="@drawable/dropdown_arrow" />
     </RelativeLayout>
 
