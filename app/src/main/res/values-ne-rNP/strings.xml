@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">NamiMiniProject</string>
+
+    <!-- Splash Activity -->
+    <string name="splash_slogan">आफ्ना कार्यहरू सजिलै संगठित गर्नुहोस् र हरेक दिन \n थप गर्नुहोस् !!</string>
+
+
+    <!-- SettingActivity -->
+    <string name="settings">सेटिङहरू</string>
+    <string name="select_language">भाषा चयन गर्नुहोस्</string>
+    <string name="english_language">अंग्रेजी</string>
+    <string name="nepali_language">नेपाली</string>
+    <string name="select_theme">थीम</string>
+    <string name="light_theme">प्रकाश थीम</string>
+    <string name="dark_theme">अँध्यारो थीम</string>
+    <string name="logout">लगआउट</string>
+
+
+    <!-- RegisterActivity -->
+    <string name="join_us">हामीसँग सामेल हुनुहोस्!</string>
+    <string name="name">नाम:</string>
+    <string name="enter_name">आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्</string>
+    <string name="email">इमेल:</string>
+    <string name="enter_email">आफ्नो इमेल प्रविष्ट गर्नुहोस्</string>
+    <string name="confirm_password">पासवर्ड पुष्टि गर्नुहोस्:</string>
+    <string name="enter_confirm_password">पासवर्ड पुष्टि गर्नुहोस्</string>
+    <string name="register">दर्ता गर्नुहोस्</string>
+    <string name="login_check">पहिले नै खाता छ?</string>
+    <string name="sign_in">साइन इन</string>
+
+
+    <!-- Login and Register Activity -->
+    <string name="password">पासवर्ड:</string>
+    <string name="enter_password">पासवर्ड प्रविष्ट गर्नुहोस्</string>
+
+
+    <!-- LoginActivity -->
+    <string name="login_text">लगइन गर्नुहोस्</string>
+    <string name="login_username">प्रयोगकर्ता नाम</string>
+    <string name="enter_username">प्रयोगकर्ता नाम प्रविष्ट गर्नुहोस्</string>
+    <string name="login_password">पासवर्ड</string>
+    <string name="remember_me">मलाई सम्झनुहोस्</string>
+    <string name="forgot_password">पासवर्ड बिर्सनुभयो?</string>
+    <string name="register_check">खाता छैन?</string>
+    <string name="sign_up">साइन अप</string>
+
+
+    <!-- HomeActivity -->
+    <string name="todo_title">गर्नुपर्ने कामको सूची</string>
+    <string name="static_text">नमस्ते, प्रांजल</string>
+    <string name="static_task_no">१०</string>
+    <string name="total_task">कुल कार्य</string>
+
+
+    <!-- Home Activity and CreateTaskActivity -->
+    <string name="create_task">कार्य सिर्जना गर्नुहोस्</string>
+
+
+    <!-- CreateTaskActivity -->
+    <string name="task_title">कार्य शीर्षक</string>
+    <string name="enter_title">शीर्षक प्रविष्ट गर्नुहोस्</string>
+    <string name="task_date">मिति</string>
+    <string name="select_date">मिति चयन गर्नुहोस्</string>
+    <string name="task_time">समय</string>
+    <string name="select_time">समय चयन गर्नुहोस्</string>
+
+    <string name="task_priority">प्राथमिकता</string>
+    <string-array name="priority_spinner">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <string name="task_status">स्थिति</string>
+    <string-array name="status_spinner">
+        <item>Pending</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string name="form_task_description">विवरण</string>
+    <string name="enter_description">विवरण प्रविष्ट गर्नुहोस्</string>
+
+    <!-- TodoListItemActivity -->
+    <string name="task_description">कार्य विवरण यहाँ जान्छ ...</string>
+    <string name="static_due_date">देय: डिसेम्बर २५, २०२५</string>
+    <string name="static_due_time">१७:१५</string>
+    <string name="list_task_status">पूरा भयो</string>
+
+</resources>
