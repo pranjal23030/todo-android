@@ -34,7 +34,7 @@
     <string name="enter_password">Enter password</string>
 
 
-    <!--LoginActivity-->
+    <!-- LoginActivity -->
     <string name="login_text">Login</string>
     <string name="login_username">Username</string>
     <string name="enter_username">Enter user name</string>
@@ -45,18 +45,18 @@
     <string name="sign_up">Sign Up</string>
 
 
-    <!--HomeActivity-->
+    <!-- HomeActivity -->
     <string name="todo_title">To-Do List</string>
     <string name="static_text">Hello, Pranjal</string>
     <string name="static_task_no">10</string>
     <string name="total_task">Total Task</string>
 
 
-    <!--Home Activity and CreateTaskActivity-->
+    <!-- Home Activity and CreateTaskActivity -->
     <string name="create_task">Create Task</string>
 
 
-    <!--CreateTaskActivity-->
+    <!-- CreateTaskActivity -->
     <string name="task_title">Task Title</string>
     <string name="enter_title">Enter title</string>
     <string name="task_date">Date</string>
@@ -80,7 +80,7 @@
     <string name="form_task_description">Description</string>
     <string name="enter_description">Enter Description</string>
 
-    <!--TodoListItemActivity-->
+    <!-- TodoListItemActivity -->
     <string name="task_description">Task Description goes here...</string>
     <string name="static_due_date">Due: Dec 25, 2025</string>
     <string name="static_due_time">17:15</string>
