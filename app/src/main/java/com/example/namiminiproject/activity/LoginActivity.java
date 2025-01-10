@@ -11,23 +11,22 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import com.example.namiminiproject.AppDatabase;
+import com.example.namiminiproject.database.AppDatabase;
 import com.example.namiminiproject.R;
 import com.example.namiminiproject.sharedPref.SharedPrefManager;
+import com.example.namiminiproject.utility.AppUtility;
 
 public class LoginActivity extends AppCompatActivity {
 
     // Views
     AppCompatButton loginButton;
     EditText loginUserName, loginUserPassword;
-
     TextView signUp;
 
     // Variables
     String name, password;
     Intent intent;
     AppDatabase appDatabase;
-
     SharedPrefManager sharedPrefManager;
 
     @Override
@@ -39,6 +38,14 @@ public class LoginActivity extends AppCompatActivity {
         sharedPrefManager = SharedPrefManager.getInstance(LoginActivity.this);
 
         initView();
+
+        // Load saved language
+        String language = sharedPrefManager.getLanguage();
+        new AppUtility().setLocale(LoginActivity.this, language);
+
+        // Load saved theme
+        String theme = sharedPrefManager.getTheme();
+        new AppUtility().setLocale(LoginActivity.this, theme);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,8 +68,9 @@ public class LoginActivity extends AppCompatActivity {
                                 if (passwordExist > 0) {
 
                                     sharedPrefManager.saveLoggedIn(true);
+                                    sharedPrefManager.setLoginCredential(name,password);
 
-                                    navigateTo(TodoListItemActivity.class);
+                                    navigateTo(HomeActivity.class);
 
                                 } else {
                                     runOnUiThread(new Runnable() {
@@ -106,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
         name = loginUserName.getText().toString();
         password = loginUserPassword.getText().toString();
     }
+
     void navigateTo(Class activityClass) {
         intent = new Intent(LoginActivity.this,activityClass);
         startActivity(intent);

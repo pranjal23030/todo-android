@@ -11,10 +11,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
-import com.example.namiminiproject.AppDatabase;
+import com.example.namiminiproject.database.AppDatabase;
 import com.example.namiminiproject.R;
-import com.example.namiminiproject.entities.User;
+import com.example.namiminiproject.database.entities.User;
 import com.example.namiminiproject.sharedPref.SharedPrefManager;
+import com.example.namiminiproject.utility.AppUtility;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -39,6 +40,14 @@ public class RegisterActivity extends AppCompatActivity {
         sharedPrefManager = SharedPrefManager.getInstance(RegisterActivity.this);
 
         initView();
+
+        // Load saved language
+        String language = sharedPrefManager.getLanguage();
+        new AppUtility().setLocale(RegisterActivity.this, language);
+
+        // Load saved theme
+        String theme = sharedPrefManager.getTheme();
+        new AppUtility().setLocale(RegisterActivity.this, theme);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,10 +85,10 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
                             appDatabase.userDao().insertUser(insertUser);
 
+                            sharedPrefManager.setLoginCredential(name,password);
                             sharedPrefManager.saveLoggedIn(true);
 
-                            navigateTo(TodoListItemActivity.class);
-
+                            navigateTo(HomeActivity.class);
                             System.out.println("User added to db !!");
                         }
 

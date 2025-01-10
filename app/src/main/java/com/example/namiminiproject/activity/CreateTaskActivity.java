@@ -5,6 +5,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.example.namiminiproject.database.AppDatabase;
 import com.example.namiminiproject.R;
 import com.example.namiminiproject.database.entities.Task;
+import com.example.namiminiproject.sharedPref.SharedPrefManager;
+import com.example.namiminiproject.utility.AppUtility;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -30,25 +33,57 @@ public class CreateTaskActivity extends AppCompatActivity {
     TextView taskDate, taskTime;
     Spinner taskPriority, taskStatus;
     AppCompatButton createTaskForm;
+
+    // Variables
     AppDatabase appDatabase;
     Intent intent;
-
-    //Variables
-
     String title, date, time, priority, status, description;
+    String taskOperation = "add";
+    int priorityPosition, statusPosition;
+    Task task;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_task);
 
+        initView();
+
+//        // Load saved language
+//        String language = sharedPrefManager.getLanguage();
+//        new AppUtility().setLocale(CreateTaskActivity.this, language);
+//
+//        // Load saved theme
+//        String theme = sharedPrefManager.getTheme();
+//        new AppUtility().setLocale(CreateTaskActivity.this, theme);
+
         appDatabase = AppDatabase.getDatabase(CreateTaskActivity.this);
 
-        initView();
+        intent = getIntent();
+        taskOperation = intent.getStringExtra("task_operation");
+
+        if (taskOperation.equals("edit")) {
+            task = (Task) intent.getSerializableExtra("task");
+            taskTitle.setText(task.getTitle());
+            taskDate.setText(task.getDueDate());
+            taskTime.setText(task.getDueTime());
+            taskDescription.setText(task.getDescription());
+
+            ArrayAdapter<CharSequence> priorityAdapter = (ArrayAdapter<CharSequence>) taskPriority.getAdapter();
+            priorityPosition = priorityAdapter.getPosition(task.getPriority());
+            taskPriority.setSelection(priorityPosition);
+
+            ArrayAdapter<CharSequence> statusAdapter = (ArrayAdapter<CharSequence>) taskStatus.getAdapter();
+            statusPosition = statusAdapter.getPosition(task.getStatus());
+            taskStatus.setSelection(statusPosition);
+        }
+
 
         createTaskForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 initVariable();
 
                 if (title.isEmpty()) {
@@ -61,22 +96,38 @@ public class CreateTaskActivity extends AppCompatActivity {
                     taskDescription.setError("Description shouldn't be empty !!");
                 } else {
                     new Thread(()->{
-                        Task insertTask = new Task(title, description, priority, status, date, time);
-                        appDatabase.taskDao().insertTask(insertTask);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(CreateTaskActivity.this, "Task created successfully !! ", Toast.LENGTH_SHORT).show();
-                                navigateTo(HomeActivity.class);
-                            }
-                        });
+                        if (taskOperation.equals("edit")) {
+
+                            appDatabase.taskDao().updateTodo(title, date, time, priority, status, description, task.getId());
+                            navigateTo(HomeActivity.class);
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(CreateTaskActivity.this, "Task edited !!", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                        } else {
+
+                            Task insertTask = new Task(title, description, priority, status, date, time);
+                            appDatabase.taskDao().insertTask(insertTask);
+                            navigateTo(HomeActivity.class);
+
+                            runOnUiThread (new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(CreateTaskActivity.this, "Task created !!", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                        }
                     }).start();
                 }
             }
         });
 
         // For Date
-
         taskDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +157,6 @@ public class CreateTaskActivity extends AppCompatActivity {
         });
 
         // For Time
-
         taskTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
