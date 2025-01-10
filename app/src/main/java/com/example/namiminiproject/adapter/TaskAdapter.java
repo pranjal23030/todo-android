@@ -1,21 +1,26 @@
 package com.example.namiminiproject.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.namiminiproject.R;
+import com.example.namiminiproject.activity.CreateTaskActivity;
+import com.example.namiminiproject.activity.HomeActivity;
 import com.example.namiminiproject.database.entities.Task;
 
 import java.util.ArrayList;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder> {
 
+    // Variables
     ArrayList<Task> taskArrayList = new ArrayList<>();
     Context context;
 
@@ -42,6 +47,25 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
         holder.tvTaskStatus.setText(task.getStatus());
         holder.tvTaskDueDate.setText(task.getDueDate());
         holder.tvTaskDueTime.setText(task.getDueTime());
+
+        holder.editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, CreateTaskActivity.class);
+
+                intent.putExtra("task_operation", "edit");
+                intent.putExtra("task", task);
+
+                context.startActivity(intent);
+            }
+        });
+
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity) context).showDeleteDialog(task);
+            }
+        });
     }
 
     @Override
@@ -52,6 +76,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         // Working on findViewById
         TextView tvTaskTitle, tvTaskDescription, tvTaskStatus, tvTaskDueDate, tvTaskDueTime;
+        ImageView editButton, deleteButton;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -66,6 +91,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ItemViewHolder
             tvTaskStatus = itemView.findViewById(R.id.tv_task_status);
             tvTaskDueTime = itemView.findViewById(R.id.tv_task_due_time);
             tvTaskDueDate = itemView.findViewById(R.id.tv_task_due_date);
+            editButton = itemView.findViewById(R.id.button_edit);
+            deleteButton = itemView.findViewById(R.id.button_delete);
         }
     }
 }
