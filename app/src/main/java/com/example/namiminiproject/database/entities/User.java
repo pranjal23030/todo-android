@@ -1,4 +1,4 @@
-package com.example.namiminiproject.entities;
+package com.example.namiminiproject.database.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

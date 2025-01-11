@@ -5,7 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.namiminiproject.entities.User;
+import com.example.namiminiproject.database.entities.User;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public interface UserDao {
     @Delete
     void deleteUser(User user);
 
-    @Query("SELECT * from users")
+    @Query("SELECT * FROM users")
     List<User> getAllUsers();
 
     @Query("UPDATE users SET name = :name, email = :email, password = :password WHERE id = :id")

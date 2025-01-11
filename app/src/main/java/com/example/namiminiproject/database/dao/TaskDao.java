@@ -24,4 +24,7 @@ public interface TaskDao {
     @Query("SELECT * FROM tasks")
     List<Task> getAllTasks();
 
+    @Query("UPDATE tasks SET title = :title, dueDate = :date, dueTime = :time, priority = :priority, status = :status, description = :description WHERE id = :id")
+    void updateTodo(String title, String date, String time, String priority, String status, String description, int id);
+
 }
