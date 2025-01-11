@@ -8,10 +8,15 @@ import androidx.appcompat.app.AppCompatDelegate;
 import java.util.Locale;
 
 public class AppUtility {
+
+    // Variables
+    Locale locale;
+    Configuration config;
+
     public void setLocale(Context context, String lang) {
-        Locale locale = new Locale(lang);
+        locale = new Locale(lang);
         Locale.setDefault(locale);
-        Configuration config = new Configuration();
+        config = new Configuration();
         config.setLocale(locale);
         context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
     }
