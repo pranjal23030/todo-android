@@ -26,7 +26,7 @@ theme customization (Light and Dark).
 
 | Home Screen | Create Task Screen | Settings Screen |
 |-------------|--------------------|-----------------|
-| <img src="screenshots/home.png" width="200"> | <img src="screenshots/create_task.png" width="200"> | <img src="screenshots/" width="200"> |
+| <img src="screenshots/home.png" width="200"> | <img src="screenshots/create_task.png" width="200"> | <img src="screenshots/settings_page.png" width="200"> |
 
 ---
 
