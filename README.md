@@ -45,7 +45,7 @@ theme customization (Light and Dark).
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/pranjal23030/todo-android
 2. Open the project in **Android Studio.**
 3. **Build and run** the app on an Android emulator or physical device.
 
