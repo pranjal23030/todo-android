@@ -8,16 +8,9 @@ theme customization (Light and Dark).
 ## Features ✨
 
 - **User Authentication**: Login and Register functionality.
-- **Task Management**:
-- Create tasks with title, description, priority, status, due date, and time.
-- Edit and delete tasks.
-- View all tasks in a RecyclerView.
-- **Priority and Status**:
-- Set task priority (e.g., High, Medium, Low).
-- Update task status (e.g., Pending and Completed).
-- **Due Date and Time**:
-- Select due dates using a DatePicker.
-- Set due times using a TimePicker.
+- **Task Management**: Create tasks with title, description, priority, status, due date, and time. Edit and delete tasks. View all tasks in a RecyclerView.
+- **Priority and Status**: Set task priority (e.g., High, Medium, Low). Update task status (e.g., Pending and Completed).
+- **Due Date and Time**: Select due dates using a DatePicker. Set due times using a TimePicker.
 - **Multi-Language Support**: Supports English and Nepali languages.
 - **Theme Customization**: Switch between Light and Dark themes.
 - **User-Friendly UI**: Clean and intuitive design with smooth navigation.
